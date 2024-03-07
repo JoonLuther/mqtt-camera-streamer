@@ -20,7 +20,7 @@ def on_publish(client, userdata, mid):
 
 def get_mqtt_client():
     """Return the MQTT client object."""
-    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)
     client.connected_flag = False  # set flag
     client.on_connect = on_connect
     client.on_publish = on_publish
